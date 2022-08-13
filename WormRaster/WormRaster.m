@@ -7,7 +7,7 @@ function [] = WormRaster()
 % Adapts spikeRasterPlot.m and cbrewer code.
 %
 % Inputs: .xlsx file containing data organized
-% into 3 columns (in this order): timeElapsed, wormID, behavioralEventID
+% into 3 columns (in this order): timeElapsed (in minutes), wormID, behavioralEventID
 %
 % Outputs: .epsc and .jpeg files of the raster plot
 %
@@ -16,7 +16,7 @@ function [] = WormRaster()
 
 %% Code
 % Ask user to pick an .xlsx file containing data. Data should be organized
-% into 3 columns: timeElapsed, wormID, behavioralEventID
+% into 3 columns: timeElapsed (in minutes), wormID, behavioralEventID
 [name, pathstr] = uigetfile2({'*.xlsx'},'Select Data File');
 if isequal(name,0)
     error('User canceled analysis session');
